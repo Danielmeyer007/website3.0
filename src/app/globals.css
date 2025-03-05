@@ -1,0 +1,49 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+
+/* Add any custom styles below */
+
+:root {
+  --background: #ede8e8;
+  --foreground: #171717;
+}
+
+body {
+  background: radial-gradient(circle at bottom, #121122 0%, #251b42 100%);
+  color: rgb(22, 22, 37);
+  font-family: 'Inter', sans-serif;
+  height: 100vh;
+  overflow: hidden; /* Para evitar scroll inesperado */
+  position: relative;
+}
+
+/* Fondo de estrellas animadas */
+@keyframes moveStars {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100vh); }
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Evita que interfiera con otros elementos */
+  z-index: -1;
+}
+
+.stars::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(36px 36px at 30% 40%, rgb(44, 7, 62), transparent),
+    radial-gradient(36px 36px at 80% 80%, rgb(52, 28, 75), transparent),
+    radial-gradient(36px 36px at 50% 50%, rgb(72, 67, 81), transparent),
+    radial-gradient(36px 36px at 70% 20%, rgb(37, 54, 97), transparent),
+    radial-gradient(36px 36px at 30% 90%, rgb(40, 53, 77), transparent);
+  background-size: 50% 50%;
+  animation: moveStars 10s linear infinite;
+}
