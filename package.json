@@ -2,6 +2,7 @@
   "name": "danyxweb3.0",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -9,26 +10,39 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "framer-motion": "^6.0.0",
+    "@tailwindcss/postcss": "^4.0.11",
+    "@tailwindcss/postcss7-compat": "^2.2.17",
+    "framer-motion": "^12.4.10",
+    "glob": "^11.0.1",
+    "lru-cache": "^11.0.2",
     "motion": "^12.4.10",
     "next": "15.2.1",
-    "postcss": "^8.5.3",
-    "@tailwindcss/vite": "^4.0.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "glob": "^9.0.0",
-    "uuid": "^8.0.0",
-    "lru-cache": "^6.0.0"
+    "react-icons": "^5.5.0",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4.0.9",
-    "@types/node": "^20",
+    "@eslint/js": "^9.21.0",
+    "@tailwindcss/postcss": "^4.0.11",
+    "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
+    "autoprefixer": "^10.0.0",
+    "eslint": "^9.21.0",
     "eslint-config-next": "15.2.1",
-    "tailwindcss": "^4.0.9",
-    "typescript": "^5"
-  }
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^16.0.0",
+    "postcss": "^8.5.3",
+    "postcss-functions": "^4.0.0",
+    "postcss-js": "^3.0.0",
+    "postcss-nested": "^5.0.0",
+    "postcss-nesting": "^13.0.1",
+    "tailwindcss": "^4.0.11",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.0"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
