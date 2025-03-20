@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/eslint-plugin-next": "^15.2.3",
     "@tailwindcss/postcss": "^4.0.15",
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "framer-motion": "^12.4.10",
@@ -38,7 +39,7 @@
     "postcss": "^8.5.3",
     "postcss-functions": "^4.0.0",
     "postcss-js": "^3.0.0",
-    "postcss-nested": "^5.0.0",
+    "postcss-nested": "^7.0.2",
     "postcss-nesting": "^13.0.1",
     "tailwindcss": "^4.0.15",
     "typescript": "^5.8.2",
