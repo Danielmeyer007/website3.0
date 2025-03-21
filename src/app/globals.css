@@ -1,6 +1,8 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
+/* Import Tailwind */
+@import "tailwindcss/preflight";
 @import "tailwindcss/utilities";
+
+/* Variables de color */
 :root {
   --background: #ede8e8;
   --foreground: #171717;
@@ -47,29 +49,4 @@ body {
   background-size: 100% 100%;
   animation: moveStars 20s linear infinite;
   opacity: 0.7;
-  @keyframes orbit-clockwise {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @keyframes orbit-counterclockwise {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(-360deg);
-    }
-  }
-  
-  .animate-orbit-clockwise {
-    animation: orbit-clockwise 20s linear infinite;
-  }
-  
-  .animate-orbit-counterclockwise {
-    animation: orbit-counterclockwise 20s linear infinite;
-  }
-  }
+}
