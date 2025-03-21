@@ -4,7 +4,9 @@
         "promise"
     ],
     "extends": [
-        "plugin:promise/recommended"
+        "plugin:promise/recommended",
+        "next",
+        "next/core-web-vitals"
     ],
     // ...existing code...
     "rules": {
@@ -21,5 +23,6 @@
         "promise/no-return-in-finally": "warn",
         "promise/valid-params": "warn",
         "promise/no-multiple-resolved": "error"
+        // Add your custom rules here
     }
 }

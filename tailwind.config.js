@@ -6,5 +6,10 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    import('@tailwindcss/forms'),
+    import('@tailwindcss/typography'),
+    import('@tailwindcss/aspect-ratio'),
+    import('@tailwindcss/line-clamp'),
+  ],
 };

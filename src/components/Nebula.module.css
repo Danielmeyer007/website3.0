@@ -1,0 +1,20 @@
+import React from "react";
+
+const Nebula = () => {
+  return (
+    <div className="relative w-screen h-screen">
+      {/* Fondo de estrellas */}
+      <div className="stars"></div>
+
+      {/* Nebulosa */}
+      <div className="nebula">
+        {/* Nubes de gas */}
+        <div className="gas-cloud"></div>
+        <div className="gas-cloud"></div>
+        <div className="gas-cloud"></div>
+      </div>
+    </div>
+  );
+};
+
+export default Nebula;
