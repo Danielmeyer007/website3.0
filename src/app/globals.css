@@ -4,6 +4,8 @@
 
 /* Variables de color */
 :root {
+  --font-geist-sans: 'Geist', sans-serif;
+  --font-geist-mono: 'Geist Mono', monospace;
   --background: #121122;
   --foreground: #dcdef0;
   --nebula-center: #6d65b3;
@@ -13,7 +15,12 @@
 
 /* Estilos generales */
 body {
-  @apply flex min-h-screen items-center justify-center bg-gradient-to-b from-[#121122] to-[#251b42] text-[var(--foreground)];
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #121122, #251b42);
+  color: var(--foreground);
   font-family: 'Inter', sans-serif;
   overflow: hidden;
 }
@@ -25,7 +32,13 @@ body {
 }
 
 .stars {
-  @apply fixed top-0 left-0 w-full h-full z-[-1] overflow-hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
 }
 
 .stars::after {
@@ -45,7 +58,10 @@ body {
 
 /* Nebulosa */
 .nebula {
-  @apply relative w-screen h-screen overflow-hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
   background: radial-gradient(circle at center, #030321, var(--nebula-center), var(--nebula-edge));
   animation: glow 10s infinite alternate;
 }
@@ -58,7 +74,12 @@ body {
 /* Estrella en el centro */
 .nebula::after {
   content: "";
-  @apply absolute top-[45%] left-[50%] w-[10vw] h-[10vw] rounded-full;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
   transform: translate(-50%, -50%);
   background: radial-gradient(circle, #ffffaa, #ffff00);
   box-shadow: 0 0 50px var(--star-color);
@@ -72,7 +93,12 @@ body {
 
 /* Gas Clouds */
 .gas-cloud {
-  @apply absolute w-[50vw] h-[50vw] rounded-full opacity-60 blur-[50px];
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  opacity: 0.6;
+  filter: blur(50px);
   background: radial-gradient(circle, rgba(173, 216, 230, 0.2), rgba(25, 25, 112, 0));
   animation: drift 30s infinite linear;
 }
